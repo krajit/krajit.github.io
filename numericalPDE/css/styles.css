@@ -1,0 +1,32 @@
+.bg-dark {
+    color: #fff;
+}
+
+
+#header {
+    text-align: center;
+    padding: 20px;
+}
+
+#laplaceEq {
+    padding: 20px;
+    text-align: justify;
+    justify-content: space-evenly; 
+    }
+
+.exercise-image {
+    position: relative;
+    left: 30%;
+    width: 40%;
+}
+
+.side-navigation {
+    text-align: center;
+    padding: 20px;    
+}
+
+
+.sidebar{
+    background-color: blanchedalmond;
+}
+

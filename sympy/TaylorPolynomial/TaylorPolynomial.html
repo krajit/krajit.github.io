@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="keywords" content="Ajit Kumar Shiv Nadar Openfoam numerical pde cfd fluid finite element assistant professor greater noida gomia">
+  <meta name="keywords" content="">
+
+  
+  
+  <title>
+    
+      Taylor Polynomials &middot; Ajit Kumar
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- mathJax : AK: Aug 15   -->
+  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+  <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script>
+
+  <!-- search engine optimization: AK Aug 18 2017    -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Taylor Polynomials | Ajit Kumar</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Taylor Polynomials" />
+<meta name="author" content="Ajit Kumar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<meta property="og:description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<link rel="canonical" href="http://localhost:4000/sympy/TaylorPolynomial/TaylorPolynomial.html" />
+<meta property="og:url" content="http://localhost:4000/sympy/TaylorPolynomial/TaylorPolynomial.html" />
+<meta property="og:site_name" content="Ajit Kumar" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Taylor Polynomials","url":"http://localhost:4000/sympy/TaylorPolynomial/TaylorPolynomial.html","author":{"@type":"Person","name":"Ajit Kumar"},"description":"Assistant Professor Department of Mathematics Shiv Nadar University","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body > <!--  class="theme-base-0f"> -->
+
+    <!-- side bar-->
+    
+    <div class="sidebar">
+      
+      <nav class="sidebar-nav" style="text-align:left;">
+
+	<ul>
+	  
+	  
+
+	 
+	  
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <a class="sidebar-nav-item" href="/sympy/">Content</a>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/generalCalculus/generalCalculus.html">Function Definition and plotting</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item active" href="/sympy/TaylorPolynomial/TaylorPolynomial.html">Taylor Polynomials</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/parametricPlot/parametricPlot.html">Parametric Curves plotting</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/polarCurves/polarCurves.html">Polar Curves</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/vectorFields/vectorFields.html">Plotting Vector Fields in Python</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/integration/integration.html">Vector field integration</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	</ul>
+      </nav>
+
+
+      <div class="container sidebar-sticky">
+	<p>Author: <a href="/aboutMe/"> Ajit Kumar </a></p>
+      </div>
+      
+    </div>
+
+
+    
+
+
+    <div class="content container">
+      <h2 id="basic-sympy-setting">Basic sympy setting</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">reset</span> <span class="o">-</span><span class="n">f</span>             
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>    <span class="c"># import everything from sympy module</span>
+<span class="n">init_printing</span><span class="p">()</span>        <span class="c"># for nice math output </span>
+
+<span class="c">## forcing plots inside browser</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</code></pre></div></div>
+
+<h3 id="declare-symbolic-variables">Declare symbolic variables</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s">'x'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="example-1">Example 1</h3>
+
+<p>Find 4-th degree Taylor polynomial of <script type="math/tex">f(x) = \sin(x)</script> at <script type="math/tex">a = \frac{\pi}{2}</script>. Plot <script type="math/tex">f(x)</script> and Taylor polynomial on the same window</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## Finding Taylor polynomial</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">)</span> \
+    <span class="o">+</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>  \
+    <span class="o">+</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span> \
+    <span class="o">+</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> \
+    <span class="o">+</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span><span class="o">/</span><span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+  
+<span class="n">T</span>
+  
+</code></pre></div></div>
+
+<script type="math/tex; mode=display">\frac{1}{24} \left(x - \frac{\pi}{2}\right)^{4} - \frac{1}{2} \left(x - \frac{\pi}{2}\right)^{2} + 1</script>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## plotting f(x) and T(x) in same window</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span> <span class="o">-</span> <span class="mi">4</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">4</span><span class="p">),</span><span class="n">show</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="s">'blue'</span>
+<span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="s">'green'</span>
+
+<span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">label</span>      <span class="o">=</span> <span class="s">'f(x)'</span>
+<span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">label</span>      <span class="o">=</span> <span class="s">'T(x)'</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/TaylorPolynomial/output_6_0.png" alt="png" /></p>
+
+<h3 id="example-2">Example 2</h3>
+
+<p>Find 20-th degree Taylor polynomial of <script type="math/tex">f(x) = \log(x)</script> at <script type="math/tex">a = 1</script>. Plot <script type="math/tex">f(x)</script> and Taylor polynomial on the same window</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## evaluation of T</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="n">k</span><span class="o">/</span><span class="n">factorial</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    
+<span class="n">T</span>
+</code></pre></div></div>
+
+<script type="math/tex; mode=display">x - \frac{1}{20} \left(x - 1\right)^{20} + \frac{1}{19} \left(x - 1\right)^{19} - \frac{1}{18} \left(x - 1\right)^{18} + \frac{1}{17} \left(x - 1\right)^{17} \\\\ - \frac{1}{16} \left(x - 1\right)^{16} + \frac{1}{15} \left(x - 1\right)^{15} - \frac{1}{14} \left(x - 1\right)^{14} + \frac{1}{13} \left(x - 1\right)^{13} - \frac{1}{12} \left(x - 1\right)^{12} + \\\\ \frac{1}{11} \left(x - 1\right)^{11} - \frac{1}{10} \left(x - 1\right)^{10} + \frac{1}{9} \left(x - 1\right)^{9} - \frac{1}{8} \left(x - 1\right)^{8} + \\\\ \frac{1}{7} \left(x - 1\right)^{7} - \frac{1}{6} \left(x - 1\right)^{6} + \frac{1}{5} \left(x - 1\right)^{5} - \frac{1}{4} \left(x - 1\right)^{4} +  \\\\ \frac{1}{3} \left(x - 1\right)^{3} - \frac{1}{2} \left(x - 1\right)^{2} - 1</script>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## plotting f(x) and T(x) in same window</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">T</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span><span class="n">show</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="s">'blue'</span>
+<span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">line_color</span> <span class="o">=</span> <span class="s">'green'</span>
+
+<span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">label</span>      <span class="o">=</span> <span class="s">'f(x)'</span>
+<span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">label</span>      <span class="o">=</span> <span class="s">'T(x)'</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/TaylorPolynomial/output_9_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+    </div>
+
+  </body>
+</html>

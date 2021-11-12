@@ -1,0 +1,11 @@
+﻿Soft conflicts of snu-timetable.fet
+Generated with FET 5.37.5 on 7/24/19 1:48 AM
+
+Number of broken soft constraints: 1
+Total soft conflicts: 0.95
+
+Soft conflicts list (in decreasing order):
+
+Time constraint teacher max 6 hours continuously broken for teacher Ranendra Narayan Biswas[20500321], on day Th, length=8. This increases the conflicts total by 0.95
+
+End of file.

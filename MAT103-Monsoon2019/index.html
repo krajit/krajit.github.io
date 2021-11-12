@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- my custom style -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <title>SNU MAT103</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+
+    <!-- math typing -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <section id="header" class="container-fluid bg-dark">
+
+            <h1>MAT103 - Mathematical Methods I</h1>
+            <p>
+                Mostly multivariable Calculus, and some Matrix Algebra
+            </p>
+
+
+
+        </section>
+    </div>
+
+
+    <div class="container">
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" hidden>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" target="blank" href="https://forms.gle/7YzD9DfG8KFNJBzS8">Classroom
+                        Activity Form</a>
+                    <a class="nav-item nav-link" target="blank"
+                        href="https://docs.google.com/spreadsheets/d/1pgCfigmbQuS20eiY_0lHksrMVLDgrEbwvmfIL4M9AUw/edit#gid=0">Todays
+                        Seating Plan</a>
+                </div>
+            </div>
+        </nav>
+        <table class="table table-bordered" id="lectureVidTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Lecture Videos (Khan Academy)</th>
+                    <th>Practice Problems from the textbook: Essential Calculus by James Stewart</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- Lecture Aug 1 -->
+                <tr>
+                    <td rowspan="2" style="vertical-align: middle;">Aug 1</td>
+                    <td> <a target="blank"
+                            href="https://www.youtube.com/watch?v=TrcCbdWwCBc&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=1">Introduction
+                            of Course</a> </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td> <a target="blank"
+                            href="https://www.youtube.com/watch?v=iBgOoaeLUcM&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=2">
+                            Representing points and vectors in 3D</a> </td>
+                    <td>
+                        <em>Section 10.1</em>: All problems. Not every problem is disussed in video but they are easy.
+                        <br />
+                        <em>Section 10.2</em>: All problems. Easy <br />
+                        <em>Q.</em> What is a fundamental difference between a point $P = (1,2,3)$ and a vector $\vec{P}
+                        = \mathbf{i} + 2\mathbf{j} + 3\mathbf{k}$?
+                    </td>
+                </tr>
+
+                <!-- Lecture Aug 6 -->
+                <tr>
+                    <td rowspan="3" style="vertical-align: middle;">Aug 6</td>
+                    <td> <a target="blank"
+                            href="https://www.youtube.com/watch?v=2DRmfxkH_VI&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=3">Introduction
+                            to 3d graphs</a>
+                    <td rowspan="3" tyle="vertical-align: middle;"><em>Section 11.1: </em>All problems.
+                        <ul>
+                            <li>Must understand <em>slicing</em>,and <em>contours</em> (which are also called <em>level
+                                    curves</em> )</li>
+                            <li>For graph problems, first, try to guess the 3d graphs in problems using slicing, or
+                                drawing controus; then use wxMaxima to plot the graphs and verify your guess.</li>
+
+                            <li>
+                                In-class problems: (Section 11.1) 5, 7, 6, 16, 24, 27, 41-46, 48
+                            </li>
+
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <a target="blank"
+                            href="https://www.youtube.com/watch?v=E9bAwP7iK80&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=4">Interpreting
+                            graphs with slices</a></td>
+                </tr>
+                <tr>
+                    <td> <a target="blank"
+                            href="https://www.youtube.com/watch?v=WsZj5Rb6do8&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=5">Contour
+                            plots</a></td>
+                </tr>
+                <tr>
+                    <td>Aug 8</td>
+                    <td>Octave tutorial on platting and animating graphs</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">Aug 13, 15</td>
+                    <td> <a target="blank"
+                            href="https://www.youtube.com/watch?v=bb4bSCjlFAw&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=6">Parametric
+                            Curves</a></td>
+                    <td>
+                        <em>Section 10.7</em> Problems: 1 to 22
+                        <br />
+
+                        <h5> <a href="plottingTutorial.html"> Octave tutorial on parametric curves and surfaces</a></h5>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=345SnWfahhY&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=7"
+                            target="_blank" rel="noopener noreferrer">Parametric Surfaces</a>
+                    </td>
+                    <td>
+                        <em>Section 13.6</em> Problems 1 to 14
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=5FWAVmwMXWg&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=8"
+                            target="_blank" rel="noopener noreferrer"> Vector Fiels - I</a>
+                        <br>
+
+                        <a href="https://www.youtube.com/watch?v=VJ2ZDLQk3IQ&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=9"
+                            target="_blank" rel="noopener noreferrer">Vector Fiels - II</a>
+
+                        <br>
+
+                        <a href="https://www.youtube.com/watch?v=Go3UvzbsSGo&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=10"
+                            target="_blank" rel="noopener noreferrer">Vector Fiels - III</a>
+                        <br>
+
+                        <a href="https://www.youtube.com/watch?v=ZiMYRBtDB2M&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=11"
+                            target="_blank" rel="noopener noreferrer">Vector Fiels - IV</a>
+
+                    </td>
+
+                    <td>
+                        <em> Section 13.1</em> Problems: 1 to 18
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Aug 20, 22</td>
+
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=roRR6A3TozM&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=12"
+                            target="_blank" rel="noopener noreferrer">Transformation I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=Rkm0dLTYUuw&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=13"
+                            target="_blank" rel="noopener noreferrer">Transformation II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=U2SQXHMqclc&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=14"
+                            target="_blank" rel="noopener noreferrer">Transformation III</a>
+                        <br>
+                    </td>
+
+                    <td>
+                        Try to recreate these animation on Octave.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+                    <td>Aug 27</td>
+
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=AXqhWeUEtQU&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=15"
+                            target="_blank" rel="noopener noreferrer">Partial Derivatives I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=dfvnCHqzK54&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=16"
+                            target="_blank" rel="noopener noreferrer">Partial Derivatives II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=kdMep5GUOBw&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=17"
+                            target="_blank" rel="noopener noreferrer">Partial Derivatives III</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=J08-L2buigM&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=18"
+                            target="_blank" rel="noopener noreferrer">Partial Derivatives IV</a>
+                    </td>
+
+                    <td>
+                        <em>Section 11.3</em> Read the section and do <em>ALL</em> problems.
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        Aug 29
+                        <hr>
+                        <a href="Aug29_classNotes.pdf" target="_blank" rel="noopener noreferrer">Class Notes</a>
+                    </td>
+
+
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=tIpKfDc295M&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=19"
+                            target="_blank" rel="noopener noreferrer">Gradients</a>,
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=_-02ze7tf08&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=20"
+                            target="_blank" rel="noopener noreferrer">Gradients and Graphs</a>,
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=N_ZRcLheNv0&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=21"
+                            target="_blank" rel="noopener noreferrer">Directional Derivative</a>,
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=4RBkIJPG6Yo&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=22"
+                            target="_blank" rel="noopener noreferrer">Directional derivative, formal definition</a>,
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=4tdyIGIEtNU&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=23"
+                            target="_blank" rel="noopener noreferrer">Directional derivatives and slope</a>,
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=TEB2z7ZlRAw&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=24"
+                            target="_blank" rel="noopener noreferrer">Why the gradient is the direction of steepest
+                            ascent</a>,
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=ZTbTYEMvo10&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=25"
+                            target="_blank" rel="noopener noreferrer">Gradient and contour maps</a>
+                    </td>
+
+                    <td>
+                        <em>Section 11.6</em> Read the section and do <em>ALL</em> problems.
+                        <hr>
+                        <a href="gradients.zip" target="_blank" rel="noopener noreferrer">Supporting Octave files</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sept 3
+                        <hr>
+                        <a href="Sept3_classNotes.pdf" target="_blank" rel="noopener noreferrer">Class Notes</a>
+                    </td>
+
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=sBldw95xMD4&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=26"
+                            target="_blank" rel="noopener noreferrer">- Position vector valued functions</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=E9Q_Lc0g1xE&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=27"
+                            target="_blank" rel="noopener noreferrer">- Derivative of a position vector valued
+                            function</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=FYMn61HLw1k&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=28"
+                            target="_blank" rel="noopener noreferrer">- Differential of a vector valued function</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=vcwvzUVLPw0&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=29"
+                            target="_blank" rel="noopener noreferrer">- Example</a>
+
+                    </td>
+
+                    <td>
+                        Section 10.7: Read this section. Problems 1-22 were done earlier. Do the remaining problems.
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td width="10%">Sept 5
+                        <hr>
+                        <a href="Sept5_classNotes.pdf" target="_blank" rel="noopener noreferrer">Class notes</a>
+
+                    </td>
+
+                    <td width="35%">
+                        <a href="https://www.youtube.com/watch?v=NO3AqAaAE6o&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=30"
+                            target="_blank" rel="noopener noreferrer">Multivariable Chain Rule - I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=hFvBZf-Jx28&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=31"
+                            target="_blank" rel="noopener noreferrer">Multivariable Chain Rule - II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=qZlBjnC3iro&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=32"
+                            target="_blank" rel="noopener noreferrer">Multivariable Chain Rule - III</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=m2mW2FQJgEE&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=33"
+                            target="_blank" rel="noopener noreferrer">Multivariable Chain Rule - IV</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=5mMLaK1ByZc&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=34"
+                            target="_blank" rel="noopener noreferrer">Multivariable Chain Rule - V (Optional)</a>
+                    </td>
+                    <td>
+                        Section 11.5. Read the section. Do all problems.
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>Sept 10 & 12
+                        <br>
+                        <a href="Sept9_notes.pdf" target="_blank" rel="noopener noreferrer">Class Notes</a>
+                    </td>
+
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=ugtUGhBSeE0&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=35"
+                            target="_blank" rel="noopener noreferrer">Curvature - I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=gspjhwSNMWs&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=36"
+                            target="_blank" rel="noopener noreferrer">Curvature - II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=Q-BxnC-uWQo&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=37"
+                            target="_blank" rel="noopener noreferrer">Curvature - III</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=8V4_4M90RfA&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=38"
+                            target="_blank" rel="noopener noreferrer">Curvature - IV</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=WmdN_iPhxAI&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=39"
+                            target="_blank" rel="noopener noreferrer">Curvature - V</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=8aHUrjgF6s0&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=40"
+                            target="_blank" rel="noopener noreferrer">Curvature - VI</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=AE8NVTyESd8&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=41"
+                            target="_blank" rel="noopener noreferrer">Curvature - VII</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=kjNgXVZ1aZ4&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=42"
+                            target="_blank" rel="noopener noreferrer">Curvature - VIII</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=biK6_fWLDRc&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=43"
+                            target="_blank" rel="noopener noreferrer">Curvature - IX</a>
+                    </td>
+
+                    <td>
+                        Section 10.8: Read the section and do problems 1 to 40.
+                        <br>
+                        <br>
+                        The concept of <em>length of curves</em> are not dicussed in the Khan Academy videos, but we
+                        will cover that in the class.
+                        <hr>
+
+                        <a href="curvature.m" target="_blank" rel="noopener noreferrer">Matlab file used in class</a>
+
+                    </td>
+
+
+                </tr>
+
+
+                <tr>
+                    <td>
+                        Sept 17
+                        <br>
+                        <a href="sept17-tangentPlanes.pdf" target="_blank" rel="noopener noreferrer">Lecture Notes</a>
+                    </td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=cHNT7_F8m1Y&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=74"
+                            target="_blank" rel="noopener noreferrer">Tangent Plane - I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=H2hOwKszKRo&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=75"
+                            target="_blank" rel="noopener noreferrer">Tangent Plane - II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=QL6qb1h65hg&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=76"
+                            target="_blank" rel="noopener noreferrer">Tangent Plane - III</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=o7_zS7Bx2VA&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=77"
+                            target="_blank" rel="noopener noreferrer">Tangent Plane - IV</a>
+
+                    </td>
+
+                    <td>
+                        Section 11.4: Read the section and do problems 1 to 30.
+
+                        <br>
+
+                        <a href="plotTangentPlanes.m" target="_blank" rel="noopener noreferrer">Tangent Plane matlab
+                            file</a>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+                    <td>
+                        Optional Topics (not in syllabus, but really cool disussion)
+                    </td>
+
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=80bJA_tSbo4&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=78"
+                            target="_blank" rel="noopener noreferrer">Quadratic Approximation - I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=UV5yj5A3QIM&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=79"
+                            target="_blank" rel="noopener noreferrer">Quadratic Approximation - II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=szHMvVXxp-g&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=80"
+                            target="_blank" rel="noopener noreferrer">Quadratic Approximation - III</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=fW3snxnCPEY&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=81"
+                            target="_blank" rel="noopener noreferrer">Quadratic Approximation - IV</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=LbBcuZukCAw&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=82"
+                            target="_blank" rel="noopener noreferrer">Hessian Matrix</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=0yEiCV-xEWQ&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=83"
+                            target="_blank" rel="noopener noreferrer">Quadratic Form</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=ClFrIg0PpnM&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=84"
+                            target="_blank" rel="noopener noreferrer">Quadratic Approximation - V</a>
+                    </td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+                    <td>Sept 19, 26
+                        <br>
+                        <a href="Section_11_7_8_Sept26.pdf" target="_blank" rel="noopener noreferrer">Class notes</a>
+
+                    </td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=ux7EQ3ip2DU&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=85"
+                            target="_blank" rel="noopener noreferrer">Multivariable maxima and minima</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=8aAU4r_pUUU&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=86"
+                            target="_blank" rel="noopener noreferrer">Saddle Points</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=nRJM4mY-Pq0&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=87"
+                            target="_blank" rel="noopener noreferrer">Second Derivative Test - I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=m1FhUjMMv30&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=88"
+                            target="_blank" rel="noopener noreferrer">Second Derivative Test - II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=sJo7D74PAak&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=89"
+                            target="_blank" rel="noopener noreferrer">Second Derivative Test - III</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=shWXeUn5BHk&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=90"
+                            target="_blank" rel="noopener noreferrer">Example Video - I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=TqslX-bUTD8&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=91"
+                            target="_blank" rel="noopener noreferrer">Example Video - II</a>
+
+                    </td>
+
+                    <td>
+                        Section 11.7: Read the section and do All problems
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Oct 1, Oct 3
+                        <br>
+                        <a href="Section_11-8_Oct-01_3.pdf" target="_blank" rel="noopener noreferrer">Class notes</a>
+                    </td>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=vwUV2IDLP8Q&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=92"
+                            target="_blank" rel="noopener noreferrer">Max-min using Lagrange Multipliers - I</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=yuqB-d5MjZA&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=93"
+                            target="_blank" rel="noopener noreferrer">Max-min using Lagrange Multipliers - II</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=aep6lwPqm6I&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=94"
+                            target="_blank" rel="noopener noreferrer">Max-min using Lagrange Multipliers - III</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=BSKtQcLQLWU&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=95"
+                            target="_blank" rel="noopener noreferrer">Lagrange multiplier example, part 1</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=5gCx5YCmXbI&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=96"
+                            target="_blank" rel="noopener noreferrer">Lagrange multiplier example, part 2</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=hQ4UNu1P2kw&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=97"
+                            target="_blank" rel="noopener noreferrer">Max-min using Lagrange Multipliers - IV</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=m-G3K2GPmEQ&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=98"
+                            target="_blank" rel="noopener noreferrer">Max-min using Lagrange Multipliers - V</a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=b9B2FZ5cqbM&list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&index=99"
+                            target="_blank" rel="noopener noreferrer">Proof of why Lagrange Multipliers work</a>
+
+                    </td>
+
+                    <td>
+                        Section 11.8: Read the section and do problems 1 to 15.
+                    </td>
+
+
+                </tr>
+
+                <tr>
+                    <td>Oct 15, 17
+                        <br>
+                        <a href="sec12_1_2_notes.pdf" target="_blank" rel="noopener noreferrer">Class notes</a>
+
+                    </td>
+                    <td>Double integration in xy coordinates</td>
+                    <td>
+                        <em>Section 12.1</em> Problems 7 to 42
+                        <br>
+                        <em>Section 12.2</em> All problems.
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct 22
+                        <br>
+                        <a href="sec12_3_polarCoordinates_notes.pdf" target="_blank" rel="noopener noreferrer">Class
+                            notes</a>
+
+                    </td>
+                    <td>Double integration in polar coordinates</td>
+                    <td>
+                        <em>Section 12.3</em> Problems 1 to 29.
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct 29, Oct 31
+                        <br>
+                        <a href="tripleIntegration-all.pdf" target="_blank" rel="noopener noreferrer">Class
+                            notes</a>
+
+                    </td>
+                    <td>Triple Integration</td>
+                    <td>
+                        <em>Section 12.5</em> All Problems
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Oct 31, Nov 5
+                        <br>
+                        <a href="tripleIntegration-changeOfVariables.pdf" target="_blank"
+                            rel="noopener noreferrer">Class
+                            notes</a>
+
+                    </td>
+                    <td>Change of variables in double and triple integration</td>
+                    <td>
+                        <em>Section 12.8</em> All Problems
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov 5, Nov 7
+                        <br>
+                        <a href="tripleIntegration_cyl_sphr.pdf" target="_blank" rel="noopener noreferrer">Class
+                            notes</a>
+
+                    </td>
+                    <td>Volume interation in cylindrical and spherical coordinates</td>
+                    <td>
+                        <em>Section 12.6</em> All Problems
+                        <br>
+                        <em>Section 12.7</em> All Problems
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov 14, 19, 21, 26
+                    <br>
+                    <a href="vector_calculus_1_Nov14.pdf" target="_blank" rel="noopener noreferrer">Class Notes</a>
+                    </td>
+                    <td>
+                        Vector fields - Intro was done earlier
+                        <br>
+                        Line integration of vector fields
+                        <br>
+                        Conservative vector fields
+                    </td>
+                    <td>
+                        <em> Section 13.1</em> Problems: 1 to 18 (review)
+                        <br>
+                        <em>Section 13.2</em> Problems: All problems
+                        <br>
+                        <em>Section 13.3</em> Problems: All problems
+                        <br>
+                        <em>Section 13.4</em> Problems: All problems
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3"> End of Syllabus. Remaining sections of Chapter 13 will be covered next semester.</td>
+                </tr>
+
+
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+</body>
+
+
+
+
+</html>

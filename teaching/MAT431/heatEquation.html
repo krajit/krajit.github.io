@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="keywords" content="Ajit Kumar Shiv Nadar Openfoam numerical pde cfd fluid finite element assistant professor greater noida gomia">
+  <meta name="keywords" content="">
+
+  
+  
+  <title>
+    
+      Heat Equation &middot; Ajit Kumar
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- mathJax : AK: Aug 15   -->
+  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+  <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script>
+
+  <!-- search engine optimization: AK Aug 18 2017    -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Heat Equation | Ajit Kumar</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Heat Equation" />
+<meta name="author" content="Ajit Kumar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<meta property="og:description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<link rel="canonical" href="http://localhost:4000/teaching/MAT431/heatEquation.html" />
+<meta property="og:url" content="http://localhost:4000/teaching/MAT431/heatEquation.html" />
+<meta property="og:site_name" content="Ajit Kumar" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Heat Equation","url":"http://localhost:4000/teaching/MAT431/heatEquation.html","author":{"@type":"Person","name":"Ajit Kumar"},"description":"Assistant Professor Department of Mathematics Shiv Nadar University","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body > <!--  class="theme-base-0f"> -->
+
+    <div class="sidebar">
+
+  <nav class="sidebar-nav" style="text-align:left;">
+
+    <!-- other tab according to _data/navigation.yml order  -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/aboutMe/">About Me</a> -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/publications/">Publications</a> -->
+    <!--  -->
+
+    <ul>
+      <li>
+	<a  class="sidebar-nav-item" href="index.html"> Course Information </a>
+      </li>
+
+      
+      <li>
+	<a class="sidebar-nav-item" href="vectorCalculus.html"> Vector Calculus Review</a>
+      </li>
+
+      <li>
+	<a class="sidebar-nav-item" href="pdeDef.html"> PDE Examples </a>
+      </li>
+
+      <li>
+	<a class="sidebar-nav-item" href="matlabDemo.html"> Introduction to Matlab pdetoolbox </a>
+      </li>
+
+      
+      <li>
+	<a class="sidebar-nav-item active" href="heatEquation.html"> Heat Equation </a>
+      </li>
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 3: PDE of generic transport phenomena </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 4: Structural Mechanics </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 5: Aeronautics, fluid mechanics </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 6-10: New areas using PDEs </a> -->
+      <!-- </li> -->
+     
+    </ul>
+  </nav>
+
+
+  <div class="container sidebar-sticky">
+    <p>Author: <a href="/aboutMe/"> Ajit Kumar </a></p>
+  </div>
+  
+</div>
+
+
+    <div class="content container">
+      <!---
+#+latex_header: \newcommand{\Sig}{\Sigma}
+#+latex_header: \newcommand{\Om}{\Omega}
+#+latex_header: \newcommand{\om}{\omega}
+#+latex_header: \newcommand{\Gm}{\Gamma}
+#+latex_header: \newcommand{\tor}{\rightarrow}
+#+latex_header: \newcommand{\R}{\mathbf{R}}
+#+latex_header: \newcommand{\p}{\partial}
+#+latex_header: \newcommand{\nl}{\nabla}
+#+latex_header: \newcommand{\Dt}{\Delta}
+#+latex_header: \newcommand{\dt}{\delta}
+#+latex_header: \newcommand{\ep}{\epsilon}
+#+latex_header: \newcommand{\vp}{\varphi}
+#+latex_header: \newcommand{\ve}{\mathbf{\varepsilon}}
+#+latex_header: \newcommand{\ml}{\left[\begin{array}}
+#+latex_header: \newcommand{\mr}{\end{array}\right]}
+#+latex_header: \newcommand{\divc}{\mathbf{div}}
+--->
+
+<p>How the <em>law of conservation of heat</em> transforms into a partial differential equation.</p>
+
+<script type="math/tex; mode=display">\rho c \frac{\p T}{\p t} - \nl \cdot (k \nl T) = Q + h(T_{\textrm{ext}} - T)</script>
+
+<!--more-->
+
+<h2 id="law-of-conservation-of-energy">Law of conservation of Energy</h2>
+
+<p>For any isolated environment, rate of change of energy is equal to rate at which energy is produced inside the region, plus the rate at which energy is flowing in from environment.</p>
+
+<h2 id="fouriers-law">Fourier’s Law</h2>
+
+<p>Heat flux density, <script type="math/tex">\vec{q}</script>, is equal to <script type="math/tex">- k \nl T</script>.</p>
+
+<h2 id="heat-equation">Heat Equation</h2>
+
+<script type="math/tex; mode=display">\rho c \frac{\p T}{\p t} - \nl \cdot (k \nl T) = Q</script>
+
+<p>where</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><script type="math/tex">\rho</script></td>
+      <td>:</td>
+      <td>density</td>
+      <td>mass per unit volume</td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">c</script></td>
+      <td>:</td>
+      <td>specific heat</td>
+      <td>heat per unit mass per unit temperature</td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">c</script></td>
+      <td>:</td>
+      <td>heat diffusion coefficient</td>
+      <td>material property</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>:</td>
+      <td>heat source</td>
+      <td>per unit volume</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="derivation">Derivation</h2>
+<p>Let <script type="math/tex">V</script> be any arbitrary volume, and <script type="math/tex">\p V</script> be its boundary. Then this law is</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{rcl}
+\textrm{rate of change of heat inside } V &=& \textrm{ rate at which heat is produced inside } V \\ 
+& &+ \textrm{rate at which heat is flowing in } V \textrm{ through } \p V.
+\end{array} %]]></script>
+
+<p>Heat inside body an infinitesimal volume <script type="math/tex">dV</script> is <script type="math/tex">c \rho T \mathrm{d}V</script>. We get the total volume by integrating this formula:</p>
+
+<script type="math/tex; mode=display">\int_V c \rho T \, \mathrm{d} V</script>
+
+<p>Heat conservation law applied to the hypothetical volume <script type="math/tex">V</script> becomes</p>
+
+<script type="math/tex; mode=display">\frac{d}{d t}\int_V c \rho T \, d V 
+= \int_V Q \, d V + \int_{\p V} \vec{q}\cdot (- \hat{n})\, dA</script>
+
+<p>Interchanging derivatives and integration on the left hand side term, and using divergence theorem on the second term on the right hand side we get</p>
+
+<script type="math/tex; mode=display">\int_V  c \rho \frac{\p T}{\p t} \, d V 
+= \int_V Q \, d V - \int_{V} \divc  (    \vec{q})  \,dV</script>
+
+<p>Using <strong>Fourier law</strong> on the right hand side term we get</p>
+
+<script type="math/tex; mode=display">\int_V  c \rho \frac{\p T}{\p t} \, d V 
+= \int_V Q \, d V + \int_{V} \divc  (  k \nl T  \,dV</script>
+
+<p>Because this relation must hold for all <script type="math/tex">V</script>, it can be proved that (under “appropriate conditions”)</p>
+
+<script type="math/tex; mode=display">c \rho \frac{\p T}{\p t} - \nl \cdot (k \nl T) = Q</script>
+
+<h2 id="examples">Examples</h2>
+
+<p>For every problem below, try to explain connect the mathematical equations with background physics in term of <em>heat, temperature, insulation, source, etc.</em> Then solve them on matlab and study the solutions. Don’t move onto new problem till you have a fair understanding of physics and maths connection for each problem.</p>
+
+<h3 id="example-1">Example 1</h3>
+
+<p>Solve the following equation on the rectangular region: ABCD, where AB = CD = 1, and AD = BC = 0.1. We are looking for the temperature function <script type="math/tex">T = T(x,y,t)</script> which satisfies the equation</p>
+
+<script type="math/tex; mode=display">c \rho \frac{\p T}{\p t} - \divc (k \nl T) = 0,</script>
+
+<p>where <script type="math/tex">c = 1</script>, <script type="math/tex">k = 0.01</script>. Boundary conditions are like <script type="math/tex">u = 0</script> on AD and BC. Other boundaries are insulated (zero Neumann boundary condition). In addition, <script type="math/tex">u</script> satisfies the initial condition <script type="math/tex">u(x,y,0) = \sin (\pi x)</script>.</p>
+
+<h3 id="example-2">Example 2</h3>
+<p>Consider a 1m x 0.1m two dimensional aluminium plate. Specific heat <script type="math/tex">c = 9 \times 10^{-4}</script>J/kg K, density <script type="math/tex">\rho 2700</script> kg/<script type="math/tex">m^3</script> ). You can consider the thickness of the plate to be 0.5 cm.</p>
+
+<p><img src="/images/2dradiation01.png" alt="alt text" /></p>
+
+<p>The north and south side of the plate are insulated, the east and west sides are fixed at <script type="math/tex">T = 0</script> for all time. The top and bottom side of the plate are in exposed to environment, and plate and environment are regularly exchanging heat at a rate which is proportional to the difference in plate temperature and environment temperature.</p>
+
+<p>Derive an equation for <script type="math/tex">T(x,y,t)</script> : temperature at point <script type="math/tex">(x,y)</script> at time <script type="math/tex">t</script>. Then solve in matlab various choices of environment temperature with initial condition <script type="math/tex">T(x,y,0) = \sin (\pi x)</script>.</p>
+
+<h3 id="example-3--heating-a-plate-with--stove">Example 3 : Heating a plate with  stove</h3>
+
+<p><img src="/images/2dradiation02.png" alt="alt text" /></p>
+
+<p>Simulate the situation described in the above figure with <script type="math/tex">Q = 50\exp \left(\frac{1}{1 + x^2 + y^2}\right)</script> and appropriate choice of <script type="math/tex">\rho, c, k, h, T_{ext}</script>s. Try to give some physical analogy of the source term <script type="math/tex">Q</script>.</p>
+
+<h3 id="example-4--heat-sink-problem">Example 4 : Heat sink problem</h3>
+
+<p class="message">
+coming shortly 
+</p>
+
+<h3 id="example-5--a-3d-problem">Example 5 : A 3d problem</h3>
+
+<p class="message">
+coming shortly 
+</p>
+
+
+    </div>
+
+  </body>
+</html>

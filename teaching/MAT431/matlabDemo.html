@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="keywords" content="Ajit Kumar Shiv Nadar Openfoam numerical pde cfd fluid finite element assistant professor greater noida gomia">
+  <meta name="keywords" content="">
+
+  
+  
+  <title>
+    
+      Course Information &middot; Ajit Kumar
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- mathJax : AK: Aug 15   -->
+  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+  <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script>
+
+  <!-- search engine optimization: AK Aug 18 2017    -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Course Information | Ajit Kumar</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Course Information" />
+<meta name="author" content="Ajit Kumar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<meta property="og:description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<link rel="canonical" href="http://localhost:4000/teaching/MAT431/matlabDemo.html" />
+<meta property="og:url" content="http://localhost:4000/teaching/MAT431/matlabDemo.html" />
+<meta property="og:site_name" content="Ajit Kumar" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Course Information","url":"http://localhost:4000/teaching/MAT431/matlabDemo.html","author":{"@type":"Person","name":"Ajit Kumar"},"description":"Assistant Professor Department of Mathematics Shiv Nadar University","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body > <!--  class="theme-base-0f"> -->
+
+    <div class="sidebar">
+
+  <nav class="sidebar-nav" style="text-align:left;">
+
+    <!-- other tab according to _data/navigation.yml order  -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/aboutMe/">About Me</a> -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/publications/">Publications</a> -->
+    <!--  -->
+
+    <ul>
+      <li>
+	<a  class="sidebar-nav-item" href="index.html"> Course Information </a>
+      </li>
+
+      
+      <li>
+	<a class="sidebar-nav-item" href="vectorCalculus.html"> Vector Calculus Review</a>
+      </li>
+
+      <li>
+	<a class="sidebar-nav-item" href="pdeDef.html"> PDE Examples </a>
+      </li>
+
+      <li>
+	<a class="sidebar-nav-item active" href="matlabDemo.html"> Introduction to Matlab pdetoolbox </a>
+      </li>
+
+      
+      <li>
+	<a class="sidebar-nav-item" href="heatEquation.html"> Heat Equation </a>
+      </li>
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 3: PDE of generic transport phenomena </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 4: Structural Mechanics </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 5: Aeronautics, fluid mechanics </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 6-10: New areas using PDEs </a> -->
+      <!-- </li> -->
+     
+    </ul>
+  </nav>
+
+
+  <div class="container sidebar-sticky">
+    <p>Author: <a href="/aboutMe/"> Ajit Kumar </a></p>
+  </div>
+  
+</div>
+
+
+    <div class="content container">
+      <!---
+#+latex_header: \newcommand{\Sig}{\Sigma}
+#+latex_header: \newcommand{\Om}{\Omega}
+#+latex_header: \newcommand{\om}{\omega}
+#+latex_header: \newcommand{\Gm}{\Gamma}
+#+latex_header: \newcommand{\tor}{\rightarrow}
+#+latex_header: \newcommand{\R}{\mathbf{R}}
+#+latex_header: \newcommand{\p}{\partial}
+#+latex_header: \newcommand{\nl}{\nabla}
+#+latex_header: \newcommand{\Dt}{\Delta}
+#+latex_header: \newcommand{\dt}{\delta}
+#+latex_header: \newcommand{\ep}{\epsilon}
+#+latex_header: \newcommand{\vp}{\varphi}
+#+latex_header: \newcommand{\ve}{\mathbf{\varepsilon}}
+#+latex_header: \newcommand{\ml}{\left[\begin{array}}
+#+latex_header: \newcommand{\mr}{\end{array}\right]}
+#+latex_header: \newcommand{\divc}{\mathbf{div}}
+--->
+
+<h2 id="matlab-pdetoolbox-demo">Matlab pdetoolbox demo</h2>
+
+<p>A toolbox for solving 2d &amp; 3d generic pde using Finite Element Method</p>
+
+<hr />
+
+<h3 id="example-1">Example 1:</h3>
+<p>Solving Poisson Equation on a Unit Disk
+Follow along this <a href="https://in.mathworks.com/help/pde/ug/solve-poissons-equation-on-a-unit-disk-pde-app.html" target="_blank"> Matlab Tutorial </a> and try to answer these questions</p>
+
+<ul>
+  <li>What was the domain?</li>
+  <li>What was the equation?</li>
+  <li>What were the boundary conditions?</li>
+  <li>What is it that you just plotted?</li>
+</ul>
+
+<hr />
+
+<h3 id="example-2">Example 2:</h3>
+<p>Solve the Poisson equation in the unit square</p>
+
+<script type="math/tex; mode=display">\Dt(u) = 0, \qquad \textrm{for }   0 \le x,y, \le 1,</script>
+
+<p>with boundary conditions: <script type="math/tex">u(y,0) = 0,  u(1,y) = 1 \;\forall y</script>, and <script type="math/tex">\frac{\p u}{\p y}(x,0) = \frac{\p u}{\p y}(x,1) =0</script> for all <script type="math/tex">0 \le x \le 1</script>.</p>
+
+<hr />
+
+<h3 id="example-3-poissons-equation-with-complex-2-d-geometry">Example 3: Poisson’s Equation with Complex 2-D Geometry</h3>
+<p>Follow along this  <a href="https://in.mathworks.com/help/pde/ug/solving-a-pde.html" target="_blank"> Matlab Tutorial </a>  and try to answer these questions</p>
+
+<ul>
+  <li>What was the domain?</li>
+  <li>What was the equation?</li>
+  <li>What were the boundary conditions?</li>
+  <li>What is it that you just plotted?</li>
+</ul>
+
+<hr />
+
+<h3 id="exercise-1-a-shell-with-hot-inside-ring">Exercise 1: A shell with hot inside ring</h3>
+
+<p><img src="/teaching/MAT431/images/shellHeat.png" alt="alt text" /></p>
+
+<hr />
+
+<h3 id="exercise-2-a-shell-with-hot-inside-ring-and-neumann-boundary-outside">Exercise 2: A shell with hot inside ring and Neumann boundary outside</h3>
+
+<p><img src="/teaching/MAT431/images/shellHeatNeumannBd.png" alt="alt text" /></p>
+
+<hr />
+
+<h3 id="project-1-solve-a-given-pde-with-slightly-non-trivial-domain-in-matlab">Project 1: Solve a given PDE with slightly non trivial domain in matlab.</h3>
+
+<p>Ajit: coming shortly</p>
+
+<hr />
+
+<h2 id="using-pdetoolbox-over-commandlines">Using pdetoolbox over commandlines</h2>
+
+<p>Relevant pages from Matlab documentation</p>
+
+<ul>
+  <li><a href="https://in.mathworks.com/help/pde/ug/solve-problems-using-pdemodel-objects.html" target="_blank"> Matlab PDE workflow </a></li>
+  <li><a href="https://in.mathworks.com/help/pde/ug/three-ways-to-create-2-d-geometry.html" target="_blank"> Geometry of 2 dimensional problems </a></li>
+  <li><a href="https://in.mathworks.com/help/pde/ug/create-and-view-3-d-geometry.html" target="_blank"> Geometry of 3 dimensional problems </a></li>
+</ul>
+
+<p>Recommended steps:</p>
+
+<ul>
+  <li>Create problems geometry with some GUI based application. Matlab pde app will work fine for 2d problems; I recommend using <a href="http://gmsh.info/" target="_blank"> Gmsh </a> for 3d problems. You can also try some equally good and also free alternatives like <a href="https://www.paraview.org/" target="_blank"> Paraview </a> or  <a href="http://www.salome-platform.org/" target="_blank">Salome</a>.</li>
+</ul>
+
+<h3 id="exercise-1">Exercise 1</h3>
+
+<p>Solve the problem shown in the figure below using the pdetool app</p>
+
+<p><img src="/teaching/MAT431/images/shellHeat.png" alt="alt text" /></p>
+
+<p>Then</p>
+
+<ul>
+  <li>Save the app data as exercise1.m</li>
+  <li>Modify the script exercise1.m so that innercircle is cold and outer circle hot.</li>
+  <li>Study every line in the exercise1.m and find (either guess or look into matlab documentation) what that line does.</li>
+</ul>
+
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="keywords" content="Ajit Kumar Shiv Nadar Openfoam numerical pde cfd fluid finite element assistant professor greater noida gomia">
+  <meta name="keywords" content="">
+
+  
+  
+  <title>
+    
+      Polar Curves &middot; Ajit Kumar
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- mathJax : AK: Aug 15   -->
+  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+  <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script>
+
+  <!-- search engine optimization: AK Aug 18 2017    -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Polar Curves | Ajit Kumar</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Polar Curves" />
+<meta name="author" content="Ajit Kumar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<meta property="og:description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<link rel="canonical" href="http://localhost:4000/sympy/polarCurves/polarCurves.html" />
+<meta property="og:url" content="http://localhost:4000/sympy/polarCurves/polarCurves.html" />
+<meta property="og:site_name" content="Ajit Kumar" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Polar Curves","url":"http://localhost:4000/sympy/polarCurves/polarCurves.html","author":{"@type":"Person","name":"Ajit Kumar"},"description":"Assistant Professor Department of Mathematics Shiv Nadar University","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body > <!--  class="theme-base-0f"> -->
+
+    <!-- side bar-->
+    
+    <div class="sidebar">
+      
+      <nav class="sidebar-nav" style="text-align:left;">
+
+	<ul>
+	  
+	  
+
+	 
+	  
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <a class="sidebar-nav-item" href="/sympy/">Content</a>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/generalCalculus/generalCalculus.html">Function Definition and plotting</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/TaylorPolynomial/TaylorPolynomial.html">Taylor Polynomials</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/parametricPlot/parametricPlot.html">Parametric Curves plotting</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item active" href="/sympy/polarCurves/polarCurves.html">Polar Curves</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/vectorFields/vectorFields.html">Plotting Vector Fields in Python</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/integration/integration.html">Vector field integration</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	</ul>
+      </nav>
+
+
+      <div class="container sidebar-sticky">
+	<p>Author: <a href="/aboutMe/"> Ajit Kumar </a></p>
+      </div>
+      
+    </div>
+
+
+    
+
+
+    <div class="content container">
+      <h1 id="import-sympy-parametric-plot-modules">Import sympy parametric plot modules</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">reset</span> <span class="o">-</span><span class="n">f</span>             
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>    
+<span class="kn">from</span> <span class="nn">sympy.plotting</span> <span class="kn">import</span> <span class="n">plot_parametric</span>
+<span class="kn">from</span> <span class="nn">sympy.plotting</span> <span class="kn">import</span> <span class="n">plot3d_parametric_line</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">init_printing</span><span class="p">()</span>        <span class="c"># for nice math output </span>
+
+<span class="c"># uncomment for plot in separate window</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">qt</span>        
+
+<span class="c"># uncomment for plot inline --- DEFAULT</span>
+<span class="c">#%matplotlib inline  </span>
+</code></pre></div></div>
+
+<h2 id="declare-symbolic-variables">Declare symbolic variables</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s">'t'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="example-plot-the-polar-curve-r--2cost">Example: Plot the polar curve <script type="math/tex">r = 2\cos(t)</script></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 2d - Example 1 </span>
+<span class="n">r</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plot_parametric</span><span class="p">(</span> <span class="n">r</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">r</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/polarCurves/output_5_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f2934e96690&gt;
+</code></pre></div></div>
+
+<h2 id="example-plot-the-polar-curve-r--1--2-sint">Example: Plot the polar curve <script type="math/tex">r = 1 + 2 \sin(t)</script></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plot_parametric</span><span class="p">(</span> <span class="n">r</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">r</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/polarCurves/output_7_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f2934e96490&gt;
+</code></pre></div></div>
+
+<h2 id="example-plot-the-polar-curve-r--3--2cost">Example: Plot the polar curve <script type="math/tex">r = 3 + 2\cos(t)</script></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plot_parametric</span><span class="p">(</span> <span class="n">r</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">r</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/polarCurves/output_9_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f292551cf90&gt;
+</code></pre></div></div>
+
+<h2 id="example-plot-the-polar-curve-r--sin3t">Example: Plot the polar curve <script type="math/tex">r = \sin(3t)</script></h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plot_parametric</span><span class="p">(</span> <span class="n">r</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">r</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/polarCurves/output_11_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f2925410450&gt;
+</code></pre></div></div>
+
+<h2 id="example-plot-the-family-of-curve-curve-r--a--b-sint-with-slidable-a-and-b">Example: Plot the family of curve curve <script type="math/tex">r = a + b \sin(t)</script> with slidable <script type="math/tex">a</script> and <script type="math/tex">b</script>.</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">reset</span> <span class="o">-</span><span class="n">f</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">qt</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.widgets</span> <span class="kn">import</span> <span class="n">Slider</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>   
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>   
+<span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+
+<span class="n">l</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">axcolor</span> <span class="o">=</span> <span class="s">'lightgoldenrodyellow'</span>
+<span class="n">axb</span>  <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">],</span> <span class="n">axisbg</span><span class="o">=</span><span class="n">axcolor</span><span class="p">)</span>
+<span class="n">axa</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">],</span> <span class="n">axisbg</span><span class="o">=</span><span class="n">axcolor</span><span class="p">)</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">Slider</span><span class="p">(</span><span class="n">axa</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+<span class="n">sb</span> <span class="o">=</span> <span class="n">Slider</span><span class="p">(</span><span class="n">axb</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="n">b</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">val</span>     
+    <span class="n">b</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">val</span>   
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    
+    <span class="n">l</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">set_xdata</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
+    
+<span class="n">sa</span><span class="o">.</span><span class="n">on_changed</span><span class="p">(</span><span class="n">update</span><span class="p">)</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">on_changed</span><span class="p">(</span><span class="n">update</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'r = a + b cos(t)'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/polarCurves/output_13_0.png" alt="png" /></p>
+
+<h2 id="example-plot-the-family-of-curve-curve-r---sinatb-with-slidable-a-and-b">Example: Plot the family of curve curve <script type="math/tex">r =  \sin[a(t+b)]</script> with slidable <script type="math/tex">a</script> and <script type="math/tex">b</script>.</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">reset</span> <span class="o">-</span><span class="n">f</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">qt</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.widgets</span> <span class="kn">import</span> <span class="n">Slider</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>   
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">b</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+
+<span class="n">l</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">axcolor</span> <span class="o">=</span> <span class="s">'lightgoldenrodyellow'</span>
+<span class="n">axb</span>  <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">],</span> <span class="n">axisbg</span><span class="o">=</span><span class="n">axcolor</span><span class="p">)</span>
+<span class="n">axa</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">],</span> <span class="n">axisbg</span><span class="o">=</span><span class="n">axcolor</span><span class="p">)</span>
+
+<span class="n">sa</span> <span class="o">=</span> <span class="n">Slider</span><span class="p">(</span><span class="n">axa</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+<span class="n">sb</span> <span class="o">=</span> <span class="n">Slider</span><span class="p">(</span><span class="n">axb</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="n">b</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">sa</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>     
+    <span class="n">b</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">val</span>
+ 
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">b</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="n">l</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">set_xdata</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
+    
+<span class="n">sa</span><span class="o">.</span><span class="n">on_changed</span><span class="p">(</span><span class="n">update</span><span class="p">)</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">on_changed</span><span class="p">(</span><span class="n">update</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'r = cos(a(t + b))'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/polarCurves/output_15_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+    </div>
+
+  </body>
+</html>

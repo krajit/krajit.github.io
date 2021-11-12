@@ -1,0 +1,46 @@
+#profilePic {
+    padding: 20px;
+    text-align: center;
+}
+
+#profilePic img {
+    border-radius: 10%;
+}
+
+
+#profilePic p {
+    text-align: justify;
+}
+
+
+.profileIntro {
+   padding-top:3rem;
+
+}
+
+
+#students {
+    padding-top: 20px;
+
+} 
+
+/* #students ul {
+    padding-left: 5%;
+    padding-right: 0;
+} */
+
+#students li {
+    margin-top:1rem;
+}
+
+
+.stName {
+    font-weight: bold;
+}
+
+
+.projectImage{
+    height: 10rem;
+    float:right;
+}
+

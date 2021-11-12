@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="keywords" content="Ajit Kumar Shiv Nadar Openfoam numerical pde cfd fluid finite element assistant professor greater noida gomia">
+  <meta name="keywords" content="">
+
+  
+  
+  <title>
+    
+      Course Information &middot; Ajit Kumar
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- mathJax : AK: Aug 15   -->
+  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+  <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script>
+
+  <!-- search engine optimization: AK Aug 18 2017    -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Course Information | Ajit Kumar</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Course Information" />
+<meta name="author" content="Ajit Kumar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<meta property="og:description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<link rel="canonical" href="http://localhost:4000/teaching/MAT431/pdeDef.html" />
+<meta property="og:url" content="http://localhost:4000/teaching/MAT431/pdeDef.html" />
+<meta property="og:site_name" content="Ajit Kumar" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Course Information","url":"http://localhost:4000/teaching/MAT431/pdeDef.html","author":{"@type":"Person","name":"Ajit Kumar"},"description":"Assistant Professor Department of Mathematics Shiv Nadar University","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body > <!--  class="theme-base-0f"> -->
+
+    <div class="sidebar">
+
+  <nav class="sidebar-nav" style="text-align:left;">
+
+    <!-- other tab according to _data/navigation.yml order  -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/aboutMe/">About Me</a> -->
+    <!--  -->
+    <!-- <a class="sidebar-nav-item" href="/publications/">Publications</a> -->
+    <!--  -->
+
+    <ul>
+      <li>
+	<a  class="sidebar-nav-item" href="index.html"> Course Information </a>
+      </li>
+
+      
+      <li>
+	<a class="sidebar-nav-item" href="vectorCalculus.html"> Vector Calculus Review</a>
+      </li>
+
+      <li>
+	<a class="sidebar-nav-item active" href="pdeDef.html"> PDE Examples </a>
+      </li>
+
+      <li>
+	<a class="sidebar-nav-item" href="matlabDemo.html"> Introduction to Matlab pdetoolbox </a>
+      </li>
+
+      
+      <li>
+	<a class="sidebar-nav-item" href="heatEquation.html"> Heat Equation </a>
+      </li>
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 3: PDE of generic transport phenomena </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 4: Structural Mechanics </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 5: Aeronautics, fluid mechanics </a> -->
+      <!-- </li> -->
+      <!-- <li> -->
+      <!-- 	<a class="sidebar-nav-item" href="pageUnderConstruction.html"> Project 6-10: New areas using PDEs </a> -->
+      <!-- </li> -->
+     
+    </ul>
+  </nav>
+
+
+  <div class="container sidebar-sticky">
+    <p>Author: <a href="/aboutMe/"> Ajit Kumar </a></p>
+  </div>
+  
+</div>
+
+
+    <div class="content container">
+      <!---
+#+latex_header: \newcommand{\Sig}{\Sigma}
+#+latex_header: \newcommand{\Om}{\Omega}
+#+latex_header: \newcommand{\om}{\omega}
+#+latex_header: \newcommand{\Gm}{\Gamma}
+#+latex_header: \newcommand{\tor}{\rightarrow}
+#+latex_header: \newcommand{\R}{\mathbf{R}}
+#+latex_header: \newcommand{\p}{\partial}
+#+latex_header: \newcommand{\nl}{\nabla}
+#+latex_header: \newcommand{\Dt}{\Delta}
+#+latex_header: \newcommand{\dt}{\delta}
+#+latex_header: \newcommand{\ep}{\epsilon}
+#+latex_header: \newcommand{\vp}{\varphi}
+#+latex_header: \newcommand{\ve}{\mathbf{\varepsilon}}
+#+latex_header: \newcommand{\ml}{\left[\begin{array}}
+#+latex_header: \newcommand{\mr}{\end{array}\right]}
+#+latex_header: \newcommand{\divc}{\mathbf{div}}
+--->
+
+<h2 id="project-1--introduction-to-pdes-and-matlab-pde-toolbox">Project 1 : Introduction to PDEs and Matlab pde toolbox</h2>
+
+<h3 id="definition-of-a-pde">Definition of a PDE</h3>
+<p>A Partial Differential Equation (PDE) is an equation in which</p>
+
+<ul>
+  <li>the unknown <script type="math/tex">u(x,y,z)</script>  is a multivariable function</li>
+  <li>at least one term in the equation must have some partial derivative of the unknown</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<h4 id="poissons-equation-wiki">Poisson’s equation [<a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Wiki</a>]</h4>
+
+<script type="math/tex; mode=display">\Dt \phi = f</script>
+
+<h4 id="heat-equation-diffusion-equation-wiki">Heat Equation, Diffusion Equation (<a href="https://en.wikipedia.org/wiki/Heat_equation">Wiki</a>]</h4>
+
+<script type="math/tex; mode=display">\frac{\p u}{\p t} -\alpha \left(\frac{\p^2 u}{\p x^2} + \frac{\p^2 u}{\p y^2} + \frac{\p^2 u}{\p z^2} \right) = 0</script>
+
+<h4 id="convection-and-diffusion-equation-wiki">Convection and diffusion equation [<a href="https://en.wikipedia.org/wiki/Convection%E2%80%93diffusion_equation">Wiki</a>]</h4>
+
+<script type="math/tex; mode=display">\frac{\partial c}{\partial t}  = \nabla \cdot (D \nabla c) - \nabla \cdot (\vec{v} c) + R</script>
+
+<h4 id="wave-equation-wiki">Wave equation [<a href="[https://en.wikipedia.org/wiki/Wave_equation">Wiki</a>]</h4>
+<p><script type="math/tex">{ \partial^2 u \over \partial t^2 } = c^2 \nabla^2 u</script></p>
+
+<h4 id="equations-of-mechanical-engineering-link">Equations of Mechanical Engineering [<a href="https://in.mathworks.com/help/pde/structural-mechanics-equations.html?s_tid=srchtitle">Link</a>]</h4>
+
+<h4 id="pde-is-air-pollution-study-link">PDE is air pollution study [<a href="http://www.sciencedirect.com/science/article/pii/S0895717706000793">Link</a>]</h4>
+
+<h4 id="navier-stokes-equation-link">Navier-Stokes Equation [<a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">Link</a>]</h4>
+
+<h3 id="typical-structure-of-a-pde-problem">Typical structure of a PDE problem:</h3>
+
+<p>Typically, we will be looking for a function <script type="math/tex">u</script> which</p>
+
+<ul>
+  <li>satisfies a given PDE in the interior of a given domain <script type="math/tex">\Om</script></li>
+  <li>and some information about <script type="math/tex">u</script> will be given at the boundary of the domain <script type="math/tex">\p \Om</script>.</li>
+</ul>
+
+
+    </div>
+
+  </body>
+</html>

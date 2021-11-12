@@ -1,0 +1,27 @@
+﻿Soft conflicts of snu-timetable_Dec09.fet
+Generated with FET 5.37.5 on 12/10/19 3:08 AM
+
+Number of broken soft constraints: 17
+Total soft conflicts: 16.15
+
+Soft conflicts list (in decreasing order):
+
+Time constraint activities preferred starting times broken for activity with id=18 (T:Sri Krishna Jayadev Magani[20500054], S:BIO207, AT:Lab,BIO,BIO2, St:BIO2), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=21 (T:Ashutosh Singh[20500053], S:BIO208, AT:Lab,BIO,BIO2, St:BIO2), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=107 (T:Ajoy Kapat[20501102], S:CHY122, AT:Lab,CHY,CHY1, St:BIO1,CHY1), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=132 (T:N. Sukumar[20500050], S:CHY332, AT:Lab,CHY,CHY3, St:CHY3), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=204 (T:Prakash Kumar[20500290], S:DES111, AT:Lab,DES,DES1, St:ECE21,MED2,ECE22), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=207 (T:Snigdha Banerjee[20501179],Vikash Kumar[20500361], S:DES121, AT:Lab,DES,DES1, St:), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=259 (T:Madhur Deo Upadhayay[20500212],AN FELICSONA[1810120121],PRIYANKA MATHUR[1910120098], S:EED101, AT:Lab,EED,EED1, St:MED11), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=272 (T:Ranendra Narayan Biswas[20500321],MANALI SAINI[1810120068], S:EED204, AT:Lab,EED,EED2, St:EEE2), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=290 (T:Madhukar P Dave[20500761],RUPALI BARANWAL[1910120106], S:EED307, AT:Lab,EED,EED3, St:EEE3), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=325 (T:Shaik Jani Babu[1610120124],Sonal Singhal[20500080], S:EED401, AT:Lab,EED,EED4, St:ECE32), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=517 (T:SUNIL KUMAR[1910120127],Sumit Tiwari[20501098], S:MED305, AT:Lab,MED,MED3, St:MED31), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=532 (T:Sathi Rajesh Reddy[20500731], S:MED404, AT:Lab,MED,MED4, St:MED32), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=549 (T:Jaideep Ghosh[20500378], S:MKT405, AT:Lab,MKT,MKT4, St:BMS3), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=597 (T:Aloke Kanjilal[20500143],BISWESWAR SANTRA[1910120061],ANANYA CHATTARAJ[1710120051], S:PHY208, AT:Lab,PHY,PHY2, St:PHY2), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=608 (T:Sajal Kumar Ghosh[20500246],VIKASH SHARMA[1810120102],YOGESH YADAV[1710120094], S:PHY308, AT:Lab,PHY,PHY3, St:PHY3), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=191 (T:Harish Chandra Karnick[20500537], S:CSD303, AT:LEC1,CSD,CSD3,LecTTh, St:CSD32,CSD31), increases conflicts total by 0.95
+Time constraint activities preferred starting times broken for activity with id=192 (T:Harish Chandra Karnick[20500537], S:CSD303, AT:LEC1,CSD,CSD3,LecTTh, St:CSD32,CSD31), increases conflicts total by 0.95
+
+End of file.

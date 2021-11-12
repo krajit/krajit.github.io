@@ -1,0 +1,18 @@
+.windTurbineIntro{
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.imageContainer {
+    text-align: center;
+    /* padding: 10px; */
+}
+
+.imageContainer img {
+    width: 100%;
+}
+
+#turbineHeader {
+    text-align: center;
+    padding: 10px;
+}

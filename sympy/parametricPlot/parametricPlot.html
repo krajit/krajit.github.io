@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="keywords" content="Ajit Kumar Shiv Nadar Openfoam numerical pde cfd fluid finite element assistant professor greater noida gomia">
+  <meta name="keywords" content="">
+
+  
+  
+  <title>
+    
+      Parametric Curves plotting &middot; Ajit Kumar
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- mathJax : AK: Aug 15   -->
+  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+  <script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local.js"></script>
+
+  <!-- search engine optimization: AK Aug 18 2017    -->
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Parametric Curves plotting | Ajit Kumar</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Parametric Curves plotting" />
+<meta name="author" content="Ajit Kumar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<meta property="og:description" content="Assistant Professor Department of Mathematics Shiv Nadar University" />
+<link rel="canonical" href="http://localhost:4000/sympy/parametricPlot/parametricPlot.html" />
+<meta property="og:url" content="http://localhost:4000/sympy/parametricPlot/parametricPlot.html" />
+<meta property="og:site_name" content="Ajit Kumar" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Parametric Curves plotting","url":"http://localhost:4000/sympy/parametricPlot/parametricPlot.html","author":{"@type":"Person","name":"Ajit Kumar"},"description":"Assistant Professor Department of Mathematics Shiv Nadar University","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body > <!--  class="theme-base-0f"> -->
+
+    <!-- side bar-->
+    
+    <div class="sidebar">
+      
+      <nav class="sidebar-nav" style="text-align:left;">
+
+	<ul>
+	  
+	  
+
+	 
+	  
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <a class="sidebar-nav-item" href="/sympy/">Content</a>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/generalCalculus/generalCalculus.html">Function Definition and plotting</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/TaylorPolynomial/TaylorPolynomial.html">Taylor Polynomials</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item active" href="/sympy/parametricPlot/parametricPlot.html">Parametric Curves plotting</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/polarCurves/polarCurves.html">Polar Curves</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/vectorFields/vectorFields.html">Plotting Vector Fields in Python</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	   
+
+	  
+	    <li>  <a class="sidebar-nav-item" href="/sympy/integration/integration.html">Vector field integration</a> </li>
+	  
+
+
+
+	  
+	    
+	  
+
+	</ul>
+      </nav>
+
+
+      <div class="container sidebar-sticky">
+	<p>Author: <a href="/aboutMe/"> Ajit Kumar </a></p>
+      </div>
+      
+    </div>
+
+
+    
+
+
+    <div class="content container">
+      <h3 id="import-sympy-parametric-plot-modules">Import sympy parametric plot modules</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">reset</span> <span class="o">-</span><span class="n">f</span>             
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>    
+<span class="kn">from</span> <span class="nn">sympy.plotting</span> <span class="kn">import</span> <span class="n">plot_parametric</span>
+<span class="kn">from</span> <span class="nn">sympy.plotting</span> <span class="kn">import</span> <span class="n">plot3d_parametric_line</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">init_printing</span><span class="p">()</span>        <span class="c"># for nice math output </span>
+
+<span class="c"># uncomment for plot in separate window</span>
+<span class="c"># %matplotlib qt        </span>
+
+<span class="c"># uncomment for plot inline --- DEFAULT</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>  
+</code></pre></div></div>
+
+<h3 id="declare-symbolic-variables">Declare symbolic variables</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s">'t'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 2d - Example 1 </span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">plot_parametric</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/parametricPlot/output_4_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f40c833c650&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 2d - Example 2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="n">plot_parametric</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/parametricPlot/output_5_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f40a4f03b50&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 2d - Example 3 - Cycloid</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">plot_parametric</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/parametricPlot/output_6_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f40a4f03cd0&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 2d - Example 4 </span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">plot_parametric</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="o">*</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/parametricPlot/output_7_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f40a177f950&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 3d - Example 1 </span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
+
+<span class="n">plot3d_parametric_line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<p><img src="/sympy/parametricPlot/output_8_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f40a18da410&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 3d - Example 2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">t</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
+
+<span class="n">plot3d_parametric_line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="/sympy/parametricPlot/output_9_0.png" alt="png" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;sympy.plotting.plot.Plot at 0x7f40a177f190&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+    </div>
+
+  </body>
+</html>

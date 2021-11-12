@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 20%;
+    max-width: 20%;
+    background-color: yellow;
+    min-height: 100vh;
+    padding: 10px;
+
+
+
+
+}
+
+#sidebar li {
+    padding: 10px;
+}
+
+
+#sidebar.active {
+    margin-left: -20%;
+}
+
+#content {
+    width: 100%;
+    /* padding: 20px; */
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -20%;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}

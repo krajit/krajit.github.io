@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="localCss/styles.css">
+
+
+    <title>Wind Turbine Simulation</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130040333-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'UA-130040333-2');
+    
+        </script>
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <section id="navigationBar" class="bg-dark">
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark container">
+            <!-- <a class="navbar-brand" href="#">Ajit Kumar</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home </span></a>
+                </ul>
+            </div>
+        </nav>
+
+    </section>
+
+
+    <section id="turbineHeader" class="bg-dark text-white">
+        <h2>CFD Simulations of Wind Turbines </h2>
+        <p>Praveen Laws, Jaskaran Singh Saini, Ajit Kumar</p>
+        <p><a href="mailto:ajit.kumar@snu.edu.in" target="_top">ajit.kumar@snu.edu.in</a></p>
+        <p><a href="https://snu.edu.in/" target="_blank">Shiv Nadar University</a></p>
+
+    </section>
+
+    <div class="container">
+        <p class="windTurbineIntro">
+            With increasing visible effects of fossil fuel on our climate, the world is desperately looking for
+            alternative sources of energy. The two most promising alternatives are solar energy and wind energy. The
+            wind energy harvesting basically happens through wind turbines. Wind-generated rotary motion in turbines,
+            which through appropriate circuitry and gear system, is converted into electric power. Different turbine
+            designs function well in different wind pattern. We are always in pursuit of best wind turbines shapes
+            design. It would be very helpful to have a computer framework where one can input any conceivable turbine
+            design and be able to see its efficiency. Our group is working on developing such a design testing
+            framework. One particular example is presented here. Design of a typical savonius wind turbine is placed in
+            a virtual wind tunnel and power output is measured. The results are compared to published experimental
+            works and validations are very satisfactory. Flow around the turbines is solved using OpenFOAM.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6 imageContainer">
+                <img src="images/velocityField.gif" alt="Overset mesh motion for wind turbine simulation in OpenFOAM">
+                <p>Velocity Field</p>
+            </div>
+            <div class="col-md-6 imageContainer">
+                <img src="images/pressureField.gif" alt="Overset mesh motion for wind turbine simulation in OpenFOAM">
+                <p>Pressure Field</p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-6 imageContainer">
+                <img src="images/mesh.gif" alt="Overset mesh motion for wind turbine simulation in OpenFOAM">
+                <p>Overset Mesh Motion</p>
+            </div>
+            <div class="col-md-6 imageContainer">
+                <img src="images/velocityAndMesh.gif" alt="Overset mesh motion for wind turbine simulation in OpenFOAM">
+                <p>Mesh Motion and Velocity Field</p>
+            </div>
+        </div>
+
+        <h4>Contact Us</h4>
+        <p class="contactUs">
+            We are expert in solving Fluid-Structure-Interaction (FSI) problems. All our work are built over open
+            source codes like OpenFOAM, Gmsh. If you need our help in FSI simulations for your applications, contact me
+            at ajit.kumar@snu.edu.in.
+        </p>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
