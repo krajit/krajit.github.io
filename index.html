@@ -36,7 +36,7 @@
                         <a class="nav-link" href="#teaching">Teaching</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Other</a>
+                        <a class="nav-link" href="#other">Other</a>
                     </li>
                 </ul>
             </div>
@@ -98,7 +98,7 @@
         <section id="education"></section>
         <section id="research"></section>
         <section id="teaching"></section>
-        <section id="Other"></section>
+        <section id="other"></section>
 
         <script>
             fetch("work-history.html")
@@ -134,7 +134,7 @@
             fetch("other.html")
                 .then(response => response.text())
                 .then(html => {
-                    document.getElementById("Other").innerHTML = html;
+                    document.getElementById("other").innerHTML = html;
                 });
         </script>
 
