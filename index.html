@@ -57,7 +57,7 @@
 
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="profile-header" style="display: flex; gap: rem; align-items: center;">
                     <div class="profile-image" style="flex: 0 0 150px;">
                         <img src="images/ajit_pic.jpg" alt="Ajit Kumar"
@@ -65,23 +65,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-8">
                 <div class="profile-info" style="flex: 1; padding-left: 5px;">
                     <h1 style="margin-bottom: 0.5rem; font-size: 1.75rem;">Ajit Kumar</h1>
                     <p style="margin: 0; font-style: italic; color: #666;">Assistant Professor, Mathematics</p>
-                    <p style="margin: 0.5rem 0 0; color: #333;"><strong>Email:</strong> ajit.kumar@snu.edu.in
+                    <p style="margin: 0.1rem 0 0; color: #333;"><strong>Email:</strong> ajit.kumar@snu.edu.in
                     </p>
-                    <p style="margin: 0.5rem 0 0; color: #333;"><strong>Office:</strong> Room A111a </p>
-                    <p style="margin: 0.5rem 0 0; color: #333;"><strong>Phone:</strong> +91 8588811830
+                    <p style="margin: 0.1rem 0 0;"><strong>Office:</strong> Room A111a </p>
+                    <p style="margin: 0.1rem 0 0;"><strong>Phone:</strong> +91 8588811830
                     </p>
-                    <p style="margin: 0.5rem 0 0; color: #333;"><strong>Github</strong> <a
-                            href="https://github.com/krajit" target="_blank">github.com/krajit</a>
+                    <p style="margin: 0.1rem 0 0;"><strong>Links: </strong> <a href="https://krajit.github.io/"
+                            target="_blank">krajit.github.io</a>, <a href="https://github.com/krajit"
+                            target="_blank">github.com/krajit</a>
                     </p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
 
-            </div>
+            </div> -->
         </div>
 
         <hr>
@@ -110,46 +111,44 @@
         <section id="work-history"></section>
         <section id="awards"></section>
         <section id="education"></section>
-        <section id="research"></section>
+
+        <hr>
+
+        <section id="research">
+            <h2>Research</h2>
+
+            <div id="publications"></div>
+            <div id="students"></div>
+            <div id="conferences"></div>
+            <div id="invited_talks"></div>
+            <div id="recent_projects"></div>
+
+
+        </section>
+
+        <hr>
+
         <section id="teaching"></section>
+
+        <hr>
+
         <section id="other"></section>
 
+        <hr>
         <script>
-            fetch("work-history.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("work-history").innerHTML = html;
-                });
+            const sections = [
+                "work-history", "awards", "education", "recent_projects", "publications",
+                "students", "conferences", "invited_talks", "teaching", "other"
+            ];
 
-            fetch("awards.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("awards").innerHTML = html;
-                });
-
-            fetch("education.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("education").innerHTML = html;
-                });
-
-            fetch("research.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("research").innerHTML = html;
-                });
-
-            fetch("teaching.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("teaching").innerHTML = html;
-                });
-
-            fetch("other.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("other").innerHTML = html;
-                });
+            sections.forEach(id => {
+                fetch(`${id}.html`)
+                    .then(res => res.text())
+                    .then(html => {
+                        document.getElementById(id).innerHTML = html;
+                    })
+                    .catch(err => console.error(`Error loading ${id}.html:`, err));
+            });
         </script>
 
 
